@@ -8,10 +8,11 @@ const ContextStyling = React.createContext()
 function App() {
 
   return (
-    <ContextStyling.Provider value="dark">
+    <ContextStyling.Provider value="light">
+    <div className="container dark-theme">
       <Header/>
-          <br/>
       <Button/>
+    </div>
     </ContextStyling.Provider>
   )
 }

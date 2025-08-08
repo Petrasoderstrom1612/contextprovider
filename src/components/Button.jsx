@@ -2,8 +2,9 @@ import React from 'react'
 
 const Button = () => {
   return (
-
-    <button>click</button>
+    <button className="dark-theme">
+        Switch Theme
+    </button>
   )
 }
 

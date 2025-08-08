@@ -6,9 +6,9 @@ const Header = () => {
    const value = React.useContext(ContextStyling)
    console.log(value)
   return (
-    <div>
-      <p>{value} theme</p>
-    </div>
+    <header className={`${value}-theme`}>
+      <p>{value.split("")[0].toUpperCase()+value.slice(1)} theme</p>
+    </header>
   )
 }
 
