@@ -5,10 +5,16 @@ import Button from "./components/Button"
 const ContextStyling = React.createContext()
 
 function App() {
+const [light, setLight] = React.useState("light")
+
+const toggleTheme = () => {
+  console.log("click")
+  setLight(prev => (prev ===  "light" ? "dark" : "light"))
+}
 
   return (
-    <ContextStyling.Provider value="light">
-    <div className="container dark-theme">
+    <ContextStyling.Provider value={{light, toggleTheme}}>
+    <div className={`container ${light}-theme`}>
       <Header/>
       <Button/>
     </div>

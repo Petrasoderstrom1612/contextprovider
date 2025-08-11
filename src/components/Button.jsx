@@ -3,8 +3,9 @@ import {ContextStyling} from "../App"
 
 const Button = () => {
   const value = React.useContext(ContextStyling)
+  console.log(value)
   return (
-    <button className={`${value}-theme`}>
+    <button className={`${value.light}-theme`} onClick={value.toggleTheme}>
         Switch Theme
     </button>
   )
